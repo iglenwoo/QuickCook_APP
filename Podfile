@@ -7,5 +7,6 @@ target 'QuickCook_APP' do
 
   # Pods for QuickCook_APP
   pod 'Firebase/Core'
+  pod 'FirebaseUI'
 
 end

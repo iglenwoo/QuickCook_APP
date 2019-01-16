@@ -9,20 +9,24 @@
 /* Begin PBXBuildFile section */
 		0B0F680BE02FC5E921F8AC93 /* Pods_QuickCook_APP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BF2A0AD98FFBA8DB3469F60 /* Pods_QuickCook_APP.framework */; };
 		392091F221E729F7003AB1AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392091F121E729F7003AB1AF /* AppDelegate.swift */; };
-		392091F421E729F7003AB1AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392091F321E729F7003AB1AF /* ViewController.swift */; };
+		392091F421E729F7003AB1AF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392091F321E729F7003AB1AF /* LoginViewController.swift */; };
 		392091F721E729F7003AB1AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392091F521E729F7003AB1AF /* Main.storyboard */; };
 		392091F921E729F9003AB1AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 392091F821E729F9003AB1AF /* Assets.xcassets */; };
 		392091FC21E729F9003AB1AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392091FA21E729F9003AB1AF /* LaunchScreen.storyboard */; };
+		39C0098E21EE998A000A2221 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39C0098D21EE998A000A2221 /* GoogleService-Info.plist */; };
+		39C0099421EEAB55000A2221 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39C0099321EEAB55000A2221 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		392091EE21E729F7003AB1AF /* QuickCook_APP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickCook_APP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		392091F121E729F7003AB1AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		392091F321E729F7003AB1AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		392091F321E729F7003AB1AF /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		392091F621E729F7003AB1AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		392091F821E729F9003AB1AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		392091FB21E729F9003AB1AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		392091FD21E729F9003AB1AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39C0098D21EE998A000A2221 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		39C0099321EEAB55000A2221 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5BF2A0AD98FFBA8DB3469F60 /* Pods_QuickCook_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickCook_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D279510DBDFDB3BDD57164 /* Pods-QuickCook_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickCook_APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickCook_APP/Pods-QuickCook_APP.debug.xcconfig"; sourceTree = "<group>"; };
 		E70F15ECA6458EAAB98EF33B /* Pods-QuickCook_APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickCook_APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickCook_APP/Pods-QuickCook_APP.release.xcconfig"; sourceTree = "<group>"; };
@@ -69,12 +73,14 @@
 		392091F021E729F7003AB1AF /* QuickCook_APP */ = {
 			isa = PBXGroup;
 			children = (
+				39C0098D21EE998A000A2221 /* GoogleService-Info.plist */,
 				392091F121E729F7003AB1AF /* AppDelegate.swift */,
-				392091F321E729F7003AB1AF /* ViewController.swift */,
+				392091F321E729F7003AB1AF /* LoginViewController.swift */,
 				392091F521E729F7003AB1AF /* Main.storyboard */,
 				392091F821E729F9003AB1AF /* Assets.xcassets */,
 				392091FA21E729F9003AB1AF /* LaunchScreen.storyboard */,
 				392091FD21E729F9003AB1AF /* Info.plist */,
+				39C0099321EEAB55000A2221 /* HomeViewController.swift */,
 			);
 			path = QuickCook_APP;
 			sourceTree = "<group>";
@@ -100,6 +106,7 @@
 				392091EB21E729F7003AB1AF /* Frameworks */,
 				392091EC21E729F7003AB1AF /* Resources */,
 				7EBE0993D9C1636EC7BD09AC /* [CP] Embed Pods Frameworks */,
+				C7D820A7DFA5CC22D897154D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				392091FC21E729F9003AB1AF /* LaunchScreen.storyboard in Resources */,
+				39C0098E21EE998A000A2221 /* GoogleService-Info.plist in Resources */,
 				392091F921E729F9003AB1AF /* Assets.xcassets in Resources */,
 				392091F721E729F7003AB1AF /* Main.storyboard in Resources */,
 			);
@@ -166,14 +174,40 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-QuickCook_APP/Pods-QuickCook_APP-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Bolts/Bolts.framework",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKCoreKit/FBSDKCoreKit.framework",
+				"${BUILT_PRODUCTS_DIR}/FBSDKLoginKit/FBSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${PODS_ROOT}/TwitterCore/iOS/TwitterCore.framework",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Bolts.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterCore.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TwitterKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,6 +237,44 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C7D820A7DFA5CC22D897154D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-QuickCook_APP/Pods-QuickCook_APP-resources.sh",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseFirestore/gRPCCertificates-Firestore.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAnonymousAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseFacebookAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebasePhoneAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseTwitterAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
+				"${PODS_ROOT}/TwitterKit/iOS/TwitterKit.framework/TwitterKitResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/gRPCCertificates-Firestore.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAnonymousAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseFacebookAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebasePhoneAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseTwitterAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/TwitterKitResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickCook_APP/Pods-QuickCook_APP-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -210,8 +282,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				392091F421E729F7003AB1AF /* ViewController.swift in Sources */,
+				392091F421E729F7003AB1AF /* LoginViewController.swift in Sources */,
 				392091F221E729F7003AB1AF /* AppDelegate.swift in Sources */,
+				39C0099421EEAB55000A2221 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
