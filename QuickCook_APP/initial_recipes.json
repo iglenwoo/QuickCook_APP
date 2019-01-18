@@ -1,0 +1,35 @@
+{
+    "recipes": {
+        "one": {
+            "uploader": "",
+            "name": "Tuna Sandwitch",
+            "desc": "This is a really great tuna salad recipe I got from a friend who used it in her catering service business many years ago. The secret ingredients are the curry and Parmesan cheese! Odd combinations but this makes a terrific tuna sandwich! She used it for an appetizer with gourmet crackers and people always wanted her recipe. I have never tasted another tuna salad quite like this one, and it has been my favorite recipe for tuna salad for many, many years.",
+            "ingredients": [
+                "1 (7 ounce) can white tuna, drained and flaked",
+                "6 tablespoons mayonnaise or salad dressing",
+                "1 tablespoon Parmesan cheese",
+                "3 tablespoons sweet pickle relish",
+                "1/8 teaspoon dried minced onion flakes",
+                "1/4 teaspoon curry powder1 tablespoon dried parsley",
+                "1 teaspoon dried dill weed",
+                "1 pinch garlic powder"
+            ],
+            "time": {
+                "prep": "10 m",
+                "cook": "10 m"
+            },
+            "yield": "4 servings",
+            "directions": [
+                "In a medium bowl, stir together the tuna, mayonnaise, Parmesan cheese, and onion flakes. Season with curry powder, parsley, dill and garlic powder. Mix well and serve with crackers or on a sandwich."
+            ]
+        }
+    },
+    "users": {
+        "user1": {
+            "name": "Ingyu"
+        },
+        "user2": {
+            "name": "Vijay"
+        }
+    }
+}
