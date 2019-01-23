@@ -41,27 +41,24 @@ class MainTabBarController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        print("viewWillAppear called")
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             print(user ?? "addStateDidChangeListener called");
+            // TODO: is this what is supposed to be?
+            if ((user) != nil) {
+                print("Signed in?")
+            } else {
+                print("Signed out?")
+                self.openLoginView()
+            }
         }
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
+        print("viewWillDisappear called")
         Auth.auth().removeStateDidChangeListener(handle!)
         print("removeStateDidChangeListener called")
-    }
-
-
-    @IBAction func signOutTapped(_ sender: UIButton) {
-        do {
-            try Auth.auth().signOut()
-            print("Signing out succeeded")
-            openLoginView()
-        } catch let signOutError as NSError {
-            print("Error signing out: \(signOutError.localizedDescription)")
-        }
-
     }
 }
 

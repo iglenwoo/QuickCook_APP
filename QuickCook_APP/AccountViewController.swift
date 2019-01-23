@@ -18,4 +18,14 @@ class AccountViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
     }
+
+    @IBAction func signOutTapped(_ sender: UIButton) {
+        do {
+            try Auth.auth().signOut()
+            print("Signing out succeeded")
+
+        } catch let signOutError as NSError {
+            print("Error signing out: \(signOutError.localizedDescription)")
+        }
+    }
 }
