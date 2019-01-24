@@ -17,7 +17,9 @@
 		392091FC21E729F9003AB1AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 392091FA21E729F9003AB1AF /* LaunchScreen.storyboard */; };
 		394345CC21F1489100873B43 /* initial_recipes.json in Resources */ = {isa = PBXBuildFile; fileRef = 394345CB21F1489100873B43 /* initial_recipes.json */; };
 		394345CE21F15F2000873B43 /* Recipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 394345CD21F15F2000873B43 /* Recipe.swift */; };
+		396EAE9321F93F1C0047CB30 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 396EAE9221F93F1C0047CB30 /* SampleData.swift */; };
 		39C0098E21EE998A000A2221 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39C0098D21EE998A000A2221 /* GoogleService-Info.plist */; };
+		39F31A3121FA786B00E6E21E /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F31A3021FA786B00E6E21E /* RecipeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,7 +34,9 @@
 		392091FD21E729F9003AB1AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		394345CB21F1489100873B43 /* initial_recipes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = initial_recipes.json; sourceTree = "<group>"; };
 		394345CD21F15F2000873B43 /* Recipe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recipe.swift; sourceTree = "<group>"; };
+		396EAE9221F93F1C0047CB30 /* SampleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleData.swift; sourceTree = "<group>"; };
 		39C0098D21EE998A000A2221 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		39F31A3021FA786B00E6E21E /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		5BF2A0AD98FFBA8DB3469F60 /* Pods_QuickCook_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickCook_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0D279510DBDFDB3BDD57164 /* Pods-QuickCook_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickCook_APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickCook_APP/Pods-QuickCook_APP.debug.xcconfig"; sourceTree = "<group>"; };
 		E70F15ECA6458EAAB98EF33B /* Pods-QuickCook_APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickCook_APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickCook_APP/Pods-QuickCook_APP.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +94,8 @@
 				392091F321E729F7003AB1AF /* AccountViewController.swift */,
 				394345CB21F1489100873B43 /* initial_recipes.json */,
 				394345CD21F15F2000873B43 /* Recipe.swift */,
+				396EAE9221F93F1C0047CB30 /* SampleData.swift */,
+				39F31A3021FA786B00E6E21E /* RecipeCell.swift */,
 			);
 			path = QuickCook_APP;
 			sourceTree = "<group>";
@@ -293,7 +299,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				394345CE21F15F2000873B43 /* Recipe.swift in Sources */,
+				396EAE9321F93F1C0047CB30 /* SampleData.swift in Sources */,
 				392091F421E729F7003AB1AF /* AccountViewController.swift in Sources */,
+				39F31A3121FA786B00E6E21E /* RecipeCell.swift in Sources */,
 				3920322C21F7DCD500FD1848 /* MainTabBarController.swift in Sources */,
 				392091F221E729F7003AB1AF /* AppDelegate.swift in Sources */,
 				3920322E21F7DE7B00FD1848 /* RecipeTableViewController.swift in Sources */,

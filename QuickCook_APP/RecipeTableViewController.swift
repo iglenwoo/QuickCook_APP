@@ -12,49 +12,54 @@ import FirebaseDatabase
 
 class RecipeTableViewController: UITableViewController {
 
+    // MARK - Properties
+    var recipes = SampleData.generateSampleData()
+
+//    var recipes: [DataSnapshot]! = []
     var ref: DatabaseReference!
+    var recipesRef: DatabaseReference!
+    var refHandle: DatabaseHandle?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ref = Database.database().reference()
-        print(ref.key ?? "default value - root")
-        let childRef = ref.child("recipes")
-        print(childRef.key ?? "default value - childRef")
-        
+        configureDatabase()
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
-    
-    deinit {
-        
+
+    func configureDatabase() {
+        ref = Database.database().reference()
+
+        // TODO: fix error that comes from below line
+//        recipesRef = ref.child("recipes").child(postKey)
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return recipes.count
     }
     
-
-    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecipeCell", for: indexPath) as! RecipeCell
 
         // Configure the cell...
+        let recipe = recipes[indexPath.row]
+        cell.nameLabel.text = recipe.name
 
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.
