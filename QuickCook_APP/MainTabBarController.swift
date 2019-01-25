@@ -28,6 +28,7 @@ class MainTabBarController: UITabBarController {
 
         // TODO: handle user session correctly
         if Auth.auth().currentUser != nil {
+            print("[MainTabBarController] Current user is \"\(Auth.auth().currentUser.debugDescription)\"")
         } else {
             openLoginView()
         }
