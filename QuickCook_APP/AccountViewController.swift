@@ -22,10 +22,10 @@ class AccountViewController: UIViewController {
     @IBAction func signOutTapped(_ sender: UIButton) {
         do {
             try Auth.auth().signOut()
-            print("Signing out succeeded")
+            debugPrint("[AccountViewController] Signing out succeeded")
 
         } catch let signOutError as NSError {
-            print("Error signing out: \(signOutError.localizedDescription)")
+            debugPrint("[AccountViewController] Error signing out: \(signOutError.localizedDescription)")
         }
     }
 }

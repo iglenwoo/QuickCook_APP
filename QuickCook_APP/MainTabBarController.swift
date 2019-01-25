@@ -28,7 +28,6 @@ class MainTabBarController: UITabBarController {
 
         // TODO: handle user session correctly
         if Auth.auth().currentUser != nil {
-            print("Current user is \"\(Auth.auth().currentUser.debugDescription)\"")
         } else {
             openLoginView()
         }
@@ -41,14 +40,14 @@ class MainTabBarController: UITabBarController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        print("viewWillAppear called")
+        debugPrint("[MainTabBarController] viewWillAppear called")
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
-            print(user ?? "addStateDidChangeListener called");
+            debugPrint(user ?? "[MainTabBarController] addStateDidChangeListener called");
             // TODO: is this what is supposed to be?
             if ((user) != nil) {
-                print("Signed in?")
+                debugPrint("[MainTabBarController] Signed in?")
             } else {
-                print("Signed out?")
+                debugPrint("[MainTabBarController] Signed out?")
                 self.openLoginView()
             }
         }
@@ -56,21 +55,23 @@ class MainTabBarController: UITabBarController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
 
-        print("viewWillDisappear called")
+        debugPrint("[MainTabBarController] viewWillDisappear called")
         Auth.auth().removeStateDidChangeListener(handle!)
-        print("removeStateDidChangeListener called")
+        debugPrint("[MainTabBarController] removeStateDidChangeListener called")
     }
 }
 
 extension MainTabBarController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith authDataResult: AuthDataResult?, error: Error?) {
         if error != nil {
-            print(error?.localizedDescription ?? "error?")
+            debugPrint(error?.localizedDescription ?? "error?")
             return
         }
 
-        let pid = authDataResult!.user.providerID
-        print("providerID is \"\(pid)\"")
+        let uid = authDataResult!.user.uid
+        let email = authDataResult!.user.email
+        debugPrint("[MainTabBarController] uid is \"\(uid)\"")
+        debugPrint("[MainTabBarController] email is \"\(email)\"")
     }
 }
 

@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import FirebaseUI
 
 class RecipeTableViewController: UITableViewController {
 
@@ -19,9 +20,11 @@ class RecipeTableViewController: UITableViewController {
     var ref: DatabaseReference!
     var recipesRef: DatabaseReference!
     var refHandle: DatabaseHandle?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        debugPrint("[RecipeTableViewController] viewDidLoad called")
 
         configureDatabase()
 
@@ -35,9 +38,17 @@ class RecipeTableViewController: UITableViewController {
     func configureDatabase() {
         ref = Database.database().reference()
 
-        // TODO: fix error that comes from below line
-//        recipesRef = ref.child("recipes").child(postKey)
+        let identifier = "recipes"
+        recipesRef = ref.child(identifier);
+
+        recipesRef.observe(DataEventType.value, with: { snapshot in
+//            debugPrint(snapshot.value)
+            for child in snapshot.children {
+                debugPrint(child)
+            }
+        })
     }
+
 
     // MARK: - Table view data source
 
