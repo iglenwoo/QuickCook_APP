@@ -9,9 +9,23 @@
 import Foundation
 import Firebase
 
-struct CookTime {
+struct Time {
     var prep: String
     var cook: String
+
+    init(prep: String, cook: String) {
+        self.prep = prep
+        self.cook = cook
+    }
+
+    init?(snapshot: DataSnapshot) {
+        let dict = snapshot.value as? [String:Any]
+        let prep = dict?["prep"] as! String
+        let cook = dict?["cook"] as! String
+
+        self.prep = prep
+        self.cook = cook
+    }
 }
 
 struct Recipe {
@@ -19,11 +33,11 @@ struct Recipe {
     var name: String
     var desc: String
     var ingredients: [String]
-    var time: CookTime
+    var time: Time
     var yield: String
     var directions: [String]
 
-    init(uploader: String, name: String, desc: String, ingredients: [String], time: CookTime, yield: String, directions: [String]) {
+    init(uploader: String, name: String, desc: String, ingredients: [String], time: Time, yield: String, directions: [String]) {
         self.uploader = uploader
         self.name = name
         self.desc = desc
@@ -39,11 +53,7 @@ struct Recipe {
         let name = dict?["name"]  as! String
         let desc = dict?["desc"]  as! String
         let ingredients = dict?["ingredients"]  as! [String]
-
-        let timeSnap = snapshot.childSnapshot(forPath: "time")
-        let timeDic = timeSnap.value as? [String:Any]
-        let time = CookTime(prep: timeDic?["prep"] as! String, cook: timeDic?["cook"] as! String)
-
+        let time = Time(snapshot: snapshot.childSnapshot(forPath: "time"))
         let yield = dict?["yield"] as! String
         let directions = dict?["directions"] as! [String]
 
@@ -51,7 +61,7 @@ struct Recipe {
         self.name = name
         self.desc = desc
         self.ingredients = ingredients
-        self.time = time
+        self.time = time!
         self.yield = yield
         self.directions = directions
     }
