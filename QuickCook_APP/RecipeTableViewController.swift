@@ -70,7 +70,10 @@ class RecipeTableViewController: UITableViewController {
 
         // Configure the cell...
         let recipe = recipes[indexPath.row]
-        cell.nameLabel.text = recipe.name
+        cell.name.text = recipe.name
+
+        let time = String(recipe.time.prep + recipe.time.cook)
+        cell.time.text = "\(time) m"
 
         return cell
     }
