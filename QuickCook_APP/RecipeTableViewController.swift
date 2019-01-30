@@ -42,10 +42,13 @@ class RecipeTableViewController: UITableViewController {
         recipesRef = ref.child(identifier);
 
         recipesRef.observe(DataEventType.value, with: { snapshot in
-//            debugPrint(snapshot.value)
             for child in snapshot.children {
-                debugPrint(child)
+                if let snapshot = child as? DataSnapshot {
+                    self.recipes.append(Recipe(snapshot: snapshot)!)
+                }
             }
+
+            self.tableView.reloadData()
         })
     }
 
