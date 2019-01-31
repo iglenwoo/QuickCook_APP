@@ -16,7 +16,7 @@ class RecipeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        data.text = ("You tapped the cell at index \(index)")
+        data.text = ("You tapped the cell at index \(index ?? -1)")
     }
     
 
