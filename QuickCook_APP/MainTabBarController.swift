@@ -72,7 +72,7 @@ extension MainTabBarController: FUIAuthDelegate {
         let uid = authDataResult!.user.uid
         let email = authDataResult!.user.email
         debugPrint("[MainTabBarController] uid is \"\(uid)\"")
-        debugPrint("[MainTabBarController] email is \"\(email)\"")
+        debugPrint("[MainTabBarController] email is \"\(email ?? "email doesn't exist")\"")
     }
 }
 

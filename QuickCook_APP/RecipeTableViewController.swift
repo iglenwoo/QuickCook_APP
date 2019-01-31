@@ -24,6 +24,8 @@ class RecipeTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        self.tableView.allowsSelection = true
+
         debugPrint("[RecipeTableViewController] viewDidLoad called")
 
         configureDatabase()
@@ -76,6 +78,15 @@ class RecipeTableViewController: UITableViewController {
         cell.time.text = "\(time) m"
 
         return cell
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        super.prepare(for: segue, sender: sender)
+
+        let indexPath = tableView.indexPathForSelectedRow
+        let index = indexPath?.row
+        let detailVC = segue.destination as! RecipeDetailViewController
+        detailVC.index = index
     }
 
     /*
