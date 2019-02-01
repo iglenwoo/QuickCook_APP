@@ -13,13 +13,13 @@ class RecipeDetailViewController: UIViewController {
     var index: Int!
     var recipe: Recipe!
     
-    @IBOutlet weak var data: UILabel!
+//    @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var name: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        data.text = (recipe.desc)
+//        desc.text = (recipe.desc)
         name.text = (recipe.name)
     }
     
