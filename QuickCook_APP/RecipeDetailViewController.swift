@@ -13,14 +13,20 @@ class RecipeDetailViewController: UIViewController {
     var index: Int!
     var recipe: Recipe!
     
-//    @IBOutlet weak var desc: UILabel!
     @IBOutlet weak var name: UILabel!
+    @IBOutlet weak var min: UILabel!
+    @IBOutlet weak var yield: UILabel!
+    
+    @IBOutlet weak var ingredients: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-//        desc.text = (recipe.desc)
-        name.text = (recipe.name)
+        name.text = recipe.name
+        min.text = "\(String(recipe.time.prep + recipe.time.cook)) min"
+        yield.text = "\(String(recipe.yield)) yield"
+
+        ingredients.text = recipe.ingredients.joined(separator: "\n")
     }
     
 
