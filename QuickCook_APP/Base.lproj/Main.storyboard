@@ -118,7 +118,7 @@
                                 <connections>
                                     <outlet property="name" destination="wJg-Rg-kgW" id="Upp-Dd-KYA"/>
                                     <outlet property="time" destination="RKg-Kn-nfO" id="TEw-5c-Cpk"/>
-                                    <segue destination="Nme-Dd-imB" kind="show" id="RdM-91-BYF"/>
+                                    <segue destination="Nme-Dd-imB" kind="show" identifier="GoDetails" id="RdM-91-BYF"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -145,29 +145,39 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZQl-H7-FLo">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hc5-IV-QjM">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PFA-SB-xvO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuna-sandwitch" translatesAutoresizingMaskIntoConstraints="NO" id="PFA-SB-xvO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                                     </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" alpha="0.59999999999999998" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C64-Bn-BR6">
+                                                        <rect key="frame" x="10" y="211" width="300" height="29"/>
+                                                        <color key="backgroundColor" red="1" green="0.25755575250000001" blue="0.16143718009999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="24"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="C64-Bn-BR6" secondAttribute="trailing" constant="10" id="E9d-Vp-PpH"/>
                                                     <constraint firstAttribute="trailing" secondItem="PFA-SB-xvO" secondAttribute="trailing" id="LGj-Px-zav"/>
                                                     <constraint firstItem="PFA-SB-xvO" firstAttribute="leading" secondItem="hc5-IV-QjM" secondAttribute="leading" id="TxZ-DQ-Fu2"/>
+                                                    <constraint firstAttribute="bottom" secondItem="C64-Bn-BR6" secondAttribute="bottom" constant="10" id="YHg-g1-a8n"/>
                                                     <constraint firstItem="PFA-SB-xvO" firstAttribute="top" secondItem="hc5-IV-QjM" secondAttribute="top" id="tGy-AW-xoy"/>
-                                                    <constraint firstAttribute="height" constant="200" id="u1O-b0-YqG"/>
+                                                    <constraint firstItem="C64-Bn-BR6" firstAttribute="leading" secondItem="hc5-IV-QjM" secondAttribute="leading" constant="10" id="teT-pc-QUH"/>
+                                                    <constraint firstAttribute="height" constant="250" id="u1O-b0-YqG"/>
                                                     <constraint firstAttribute="bottom" secondItem="PFA-SB-xvO" secondAttribute="bottom" id="vFc-OR-O5y"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k15-4A-wHI">
-                                                <rect key="frame" x="0.0" y="200" width="320" height="200"/>
+                                                <rect key="frame" x="0.0" y="250" width="320" height="250"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8o-2L-aj8">
-                                                        <rect key="frame" x="138" y="90" width="44" height="20.5"/>
+                                                        <rect key="frame" x="138" y="115" width="44" height="20.5"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
@@ -209,6 +219,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="data" destination="J8o-2L-aj8" id="cRX-0Q-dMA"/>
+                        <outlet property="name" destination="C64-Bn-BR6" id="wMf-XS-hbR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zrI-HB-Aqu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -257,5 +268,6 @@
     <resources>
         <image name="tb-log-30" width="22.5" height="22.5"/>
         <image name="tb-settings-filled-30" width="22.5" height="22.5"/>
+        <image name="tuna-sandwitch" width="800" height="600"/>
     </resources>
 </document>

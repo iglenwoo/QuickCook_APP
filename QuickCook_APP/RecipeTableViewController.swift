@@ -80,14 +80,15 @@ class RecipeTableViewController: UITableViewController {
         return cell
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-////        super.prepare(for: segue, sender: sender)
-//
-//        let indexPath = tableView.indexPathForSelectedRow
-//        let index = indexPath?.row
-//        let detailVC = segue.destination as! RecipeDetailViewController
-//        detailVC.index = index
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        super.prepare(for: segue, sender: sender)
+
+        let indexPath = tableView.indexPathForSelectedRow
+        let index = indexPath?.row
+        let detailVC = segue.destination as! RecipeDetailViewController
+        detailVC.index = index
+        detailVC.recipe = recipes[index!]
+    }
 
     /*
     // Override to support conditional editing of the table view.
