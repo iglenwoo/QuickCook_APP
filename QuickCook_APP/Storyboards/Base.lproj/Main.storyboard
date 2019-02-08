@@ -145,7 +145,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZQl-H7-FLo">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="400"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GwW-37-Cuc">
                                                 <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
@@ -184,68 +184,10 @@
                                                     <constraint firstAttribute="trailing" secondItem="zRy-fo-0hg" secondAttribute="trailing" constant="10" id="q3S-tE-hnF"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hc5-IV-QjM">
-                                                <rect key="frame" x="0.0" y="50" width="320" height="250"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tuna-sandwitch" translatesAutoresizingMaskIntoConstraints="NO" id="PFA-SB-xvO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
-                                                    </imageView>
-                                                </subviews>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="PFA-SB-xvO" secondAttribute="bottom" id="0De-Ea-cat"/>
-                                                    <constraint firstItem="PFA-SB-xvO" firstAttribute="top" secondItem="hc5-IV-QjM" secondAttribute="top" id="MJj-eS-kvv"/>
-                                                    <constraint firstAttribute="trailing" secondItem="PFA-SB-xvO" secondAttribute="trailing" id="QSX-3c-Aza"/>
-                                                    <constraint firstItem="PFA-SB-xvO" firstAttribute="leading" secondItem="hc5-IV-QjM" secondAttribute="leading" id="sPG-ia-5jH"/>
-                                                    <constraint firstAttribute="height" constant="250" id="u1O-b0-YqG"/>
-                                                </constraints>
-                                            </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="31" translatesAutoresizingMaskIntoConstraints="NO" id="7Al-JK-W5Z">
-                                                <rect key="frame" x="0.0" y="300" width="320" height="100"/>
-                                                <subviews>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TLq-lq-4Ki">
-                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="100"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXo-t2-xM2" userLabel="Ingredients">
-                                                                <rect key="frame" x="10" y="10" width="300" height="24"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="List of Ingredients" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6kK-au-KHo" userLabel="List of Ingredients">
-                                                                <rect key="frame" x="10" y="39" width="300" height="20.5"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <constraints>
-                                                            <constraint firstItem="6kK-au-KHo" firstAttribute="leading" secondItem="TLq-lq-4Ki" secondAttribute="leading" constant="10" id="D4k-No-aXt"/>
-                                                            <constraint firstItem="qXo-t2-xM2" firstAttribute="top" secondItem="TLq-lq-4Ki" secondAttribute="top" constant="10" id="PMk-iB-Xkh"/>
-                                                            <constraint firstItem="qXo-t2-xM2" firstAttribute="leading" secondItem="TLq-lq-4Ki" secondAttribute="leading" constant="10" id="Vad-SB-zaU"/>
-                                                            <constraint firstAttribute="trailing" secondItem="6kK-au-KHo" secondAttribute="trailing" constant="10" id="Z4S-Y0-XMa"/>
-                                                            <constraint firstItem="6kK-au-KHo" firstAttribute="top" secondItem="qXo-t2-xM2" secondAttribute="bottom" constant="5" id="fnY-pd-Wnd"/>
-                                                            <constraint firstAttribute="height" constant="100" id="lvI-qO-aVG"/>
-                                                            <constraint firstAttribute="trailing" secondItem="qXo-t2-xM2" secondAttribute="trailing" constant="10" id="wtu-sp-GWN"/>
-                                                        </constraints>
-                                                    </view>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstItem="TLq-lq-4Ki" firstAttribute="leading" secondItem="7Al-JK-W5Z" secondAttribute="leading" id="2cg-QY-tX2"/>
-                                                    <constraint firstAttribute="bottom" secondItem="TLq-lq-4Ki" secondAttribute="bottom" id="OkK-Qu-Kow"/>
-                                                    <constraint firstAttribute="trailing" secondItem="TLq-lq-4Ki" secondAttribute="trailing" id="sEO-rU-MQ9"/>
-                                                </constraints>
-                                            </stackView>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="hc5-IV-QjM" firstAttribute="leading" secondItem="ZQl-H7-FLo" secondAttribute="leading" id="5Hi-hn-ILe"/>
-                                            <constraint firstAttribute="trailing" secondItem="hc5-IV-QjM" secondAttribute="trailing" id="89d-LC-0YS"/>
                                             <constraint firstItem="GwW-37-Cuc" firstAttribute="leading" secondItem="ZQl-H7-FLo" secondAttribute="leading" id="b2E-uY-wb3"/>
                                             <constraint firstAttribute="trailing" secondItem="GwW-37-Cuc" secondAttribute="trailing" id="h0F-hA-EZJ"/>
-                                            <constraint firstAttribute="bottom" secondItem="7Al-JK-W5Z" secondAttribute="bottom" id="pcB-pE-xqK"/>
-                                            <constraint firstItem="7Al-JK-W5Z" firstAttribute="leading" secondItem="ZQl-H7-FLo" secondAttribute="leading" id="qNI-uc-FuP"/>
-                                            <constraint firstAttribute="trailing" secondItem="7Al-JK-W5Z" secondAttribute="trailing" id="tEY-Hk-ZW7"/>
                                         </constraints>
                                     </stackView>
                                 </subviews>
@@ -271,9 +213,9 @@
                         <barButtonItem key="backBarButtonItem" title="Recipes" id="2Hf-oE-0hu"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="ingredients" destination="6kK-au-KHo" id="UGp-yq-iuv"/>
                         <outlet property="min" destination="rkm-6U-GmD" id="aH4-lP-irg"/>
                         <outlet property="name" destination="C64-Bn-BR6" id="wMf-XS-hbR"/>
+                        <outlet property="stackView" destination="ZQl-H7-FLo" id="mrz-Qg-QP9"/>
                         <outlet property="yield" destination="zRy-fo-0hg" id="kxP-pn-2LZ"/>
                     </connections>
                 </viewController>
@@ -307,7 +249,7 @@
                     <tabBarItem key="tabBarItem" title="Recipes" image="tb-log-30" id="pJ1-7h-qbz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RJJ-Yp-Yrx">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -323,6 +265,5 @@
     <resources>
         <image name="tb-log-30" width="22.5" height="22.5"/>
         <image name="tb-settings-filled-30" width="22.5" height="22.5"/>
-        <image name="tuna-sandwitch" width="800" height="600"/>
     </resources>
 </document>
