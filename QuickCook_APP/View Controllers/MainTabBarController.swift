@@ -26,7 +26,6 @@ class MainTabBarController: UITabBarController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
 
-        // TODO: handle user session correctly
         if Auth.auth().currentUser != nil {
             print("[MainTabBarController] Current user is \"\(Auth.auth().currentUser.debugDescription)\"")
         } else {
@@ -44,7 +43,6 @@ class MainTabBarController: UITabBarController {
         debugPrint("[MainTabBarController] viewWillAppear called")
         handle = Auth.auth().addStateDidChangeListener { (auth, user) in
             debugPrint(user ?? "[MainTabBarController] addStateDidChangeListener called");
-            // TODO: is this what is supposed to be?
             if ((user) != nil) {
                 debugPrint("[MainTabBarController] Signed in?")
             } else {

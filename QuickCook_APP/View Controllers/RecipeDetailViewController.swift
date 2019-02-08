@@ -10,6 +10,7 @@ import UIKit
 
 class RecipeDetailViewController: UIViewController, UITextViewDelegate {
 
+    // TODO: add Edit feature
     var index: Int!
     var recipe: Recipe!
     
