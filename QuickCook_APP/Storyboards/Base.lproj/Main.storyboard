@@ -142,13 +142,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPD-mh-Opc">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <rect key="frame" x="8" y="8" width="304" height="464"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ZQl-H7-FLo">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GwW-37-Cuc">
-                                                <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="304" height="50"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C64-Bn-BR6">
                                                         <rect key="frame" x="10" y="10.5" width="68" height="29"/>
@@ -157,13 +157,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" min" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rkm-6U-GmD" userLabel="Min">
-                                                        <rect key="frame" x="284.5" y="10" width="25.5" height="16"/>
+                                                        <rect key="frame" x="268.5" y="10" width="25.5" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" yield" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRy-fo-0hg" userLabel="Yield">
-                                                        <rect key="frame" x="277.5" y="24" width="32.5" height="16"/>
+                                                        <rect key="frame" x="261.5" y="24" width="32.5" height="16"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                         <color key="textColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
@@ -202,10 +202,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="WPD-mh-Opc" firstAttribute="leading" secondItem="8c6-sV-ru1" secondAttribute="leading" id="2Cj-qf-8AH"/>
-                            <constraint firstAttribute="trailing" secondItem="WPD-mh-Opc" secondAttribute="trailing" id="DmN-fX-ZFx"/>
-                            <constraint firstAttribute="bottom" secondItem="WPD-mh-Opc" secondAttribute="bottom" id="Yfv-he-Cgi"/>
-                            <constraint firstItem="WPD-mh-Opc" firstAttribute="top" secondItem="8c6-sV-ru1" secondAttribute="top" id="tB9-YO-WHm"/>
+                            <constraint firstItem="WPD-mh-Opc" firstAttribute="leading" secondItem="8c6-sV-ru1" secondAttribute="leading" constant="8" id="2Cj-qf-8AH"/>
+                            <constraint firstAttribute="trailing" secondItem="WPD-mh-Opc" secondAttribute="trailing" constant="8" id="DmN-fX-ZFx"/>
+                            <constraint firstAttribute="bottom" secondItem="WPD-mh-Opc" secondAttribute="bottom" constant="8" id="Yfv-he-Cgi"/>
+                            <constraint firstItem="WPD-mh-Opc" firstAttribute="top" secondItem="8c6-sV-ru1" secondAttribute="top" constant="8" id="tB9-YO-WHm"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ppz-q3-Z7B"/>
                     </view>
@@ -249,7 +249,7 @@
                     <tabBarItem key="tabBarItem" title="Recipes" image="tb-log-30" id="pJ1-7h-qbz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RJJ-Yp-Yrx">
-                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

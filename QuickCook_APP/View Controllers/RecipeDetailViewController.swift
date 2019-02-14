@@ -37,6 +37,9 @@ class RecipeDetailViewController: UIViewController, UITextViewDelegate {
         ingredientTextView = createTextView(content: ingredients)
         stackView.addArrangedSubview(ingredientTextView)
 
+        let dummyTitle = createTitle(content: "")
+        stackView.addArrangedSubview(dummyTitle)
+
         directionTitle = createTitle(content: "Directions")
         stackView.addArrangedSubview(directionTitle)
 
@@ -55,6 +58,7 @@ class RecipeDetailViewController: UIViewController, UITextViewDelegate {
         let title = UILabel()
         title.textColor = .darkGray
         title.text = content
+        title.font = UIFont(name: (title.font?.fontName)!, size: 20)
         title.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
         title.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
 
@@ -65,6 +69,7 @@ class RecipeDetailViewController: UIViewController, UITextViewDelegate {
     private func createTextView(content: String) -> UITextView {
         let textView = UITextView()
         textView.text = content
+        textView.font = UIFont(name: (textView.font?.fontName)!, size: 18)
         textView.textContainerInset = UIEdgeInsets(top: 4, left: 8, bottom: 8, right: 8)
         textView.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
         textView.heightAnchor.constraint(greaterThanOrEqualToConstant: 20.0).isActive = true
