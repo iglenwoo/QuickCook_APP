@@ -146,17 +146,134 @@
                     <view key="view" contentMode="scaleToFill" id="3yW-lA-aUb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Drl-IV-o9w">
+                                <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="83u-K8-Rrs">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="298.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zfj-r8-pCJ">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pl2-q8-sSt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Recipe name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HiX-r7-7yJ">
+                                                        <rect key="frame" x="0.0" y="20.5" width="320" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l5d-Hd-rXZ">
+                                                <rect key="frame" x="0.0" y="60.5" width="320" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnV-iE-q95">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="20 (number only)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u46-1c-QKh">
+                                                        <rect key="frame" x="0.0" y="20.5" width="320" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="6Ta-hY-xNr">
+                                                <rect key="frame" x="0.0" y="121" width="320" height="50.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yields" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jpl-cY-rDU">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="2 (number only)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lxq-xm-hHe">
+                                                        <rect key="frame" x="0.0" y="20.5" width="320" height="30"/>
+                                                        <nil key="textColor"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    </textField>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Mxz-dw-Emd">
+                                                <rect key="frame" x="0.0" y="181.5" width="320" height="53.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ingredients" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p9E-Eg-oCO">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e7f-oH-uWs">
+                                                        <rect key="frame" x="0.0" y="20.5" width="320" height="33"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="34U-GT-dvj">
+                                                <rect key="frame" x="0.0" y="245" width="320" height="53.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Directions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AKd-2U-o2Y">
+                                                        <rect key="frame" x="0.0" y="0.0" width="320" height="20.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0l4-1Y-FUC">
+                                                        <rect key="frame" x="0.0" y="20.5" width="320" height="33"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    </textView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="HiX-r7-7yJ" firstAttribute="width" secondItem="Drl-IV-o9w" secondAttribute="width" id="Dae-7a-CdC"/>
+                                    <constraint firstItem="83u-K8-Rrs" firstAttribute="top" secondItem="Drl-IV-o9w" secondAttribute="top" id="E7F-yO-O8s"/>
+                                    <constraint firstAttribute="bottom" secondItem="83u-K8-Rrs" secondAttribute="bottom" id="IAx-Mv-uH7"/>
+                                    <constraint firstAttribute="trailing" secondItem="83u-K8-Rrs" secondAttribute="trailing" id="JXD-q4-OV4"/>
+                                    <constraint firstItem="83u-K8-Rrs" firstAttribute="leading" secondItem="Drl-IV-o9w" secondAttribute="leading" id="g68-TN-h6Z"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Drl-IV-o9w" firstAttribute="trailing" secondItem="v5f-ZZ-vS3" secondAttribute="trailing" id="ZUu-hd-nj8"/>
+                            <constraint firstItem="Drl-IV-o9w" firstAttribute="leading" secondItem="v5f-ZZ-vS3" secondAttribute="leading" id="b4Q-sJ-cSC"/>
+                            <constraint firstItem="Drl-IV-o9w" firstAttribute="top" secondItem="v5f-ZZ-vS3" secondAttribute="top" id="gQG-TC-0nX"/>
+                            <constraint firstItem="Drl-IV-o9w" firstAttribute="bottom" secondItem="v5f-ZZ-vS3" secondAttribute="bottom" id="lon-nR-eUM"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="v5f-ZZ-vS3"/>
                     </view>
                     <navigationItem key="navigationItem" id="s3N-JZ-sk9">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cVS-vm-bYE">
                             <connections>
-                                <action selector="cacelTapped:" destination="JMX-BQ-9hW" id="b8F-Go-Z8R"/>
+                                <action selector="cancelTapped:" destination="JMX-BQ-9hW" id="y8P-Vy-38V"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="koB-qo-KFo"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="directions" destination="0l4-1Y-FUC" id="A5T-hY-NVD"/>
+                        <outlet property="ingredients" destination="e7f-oH-uWs" id="YNb-UY-nOt"/>
+                        <outlet property="minutes" destination="u46-1c-QKh" id="LUa-pu-fXM"/>
+                        <outlet property="name" destination="HiX-r7-7yJ" id="8Gw-9v-3Wx"/>
+                        <outlet property="yields" destination="lxq-xm-hHe" id="m3b-fZ-3L9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJB-jh-EJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -278,7 +395,7 @@
                     <tabBarItem key="tabBarItem" title="Recipes" image="tb-log-30" id="pJ1-7h-qbz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RJJ-Yp-Yrx">
-                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
