@@ -10,7 +10,7 @@ import UIKit
 
 class RecipeAddViewController: UIViewController {
 
-    
+
     @IBOutlet weak var name: UITextField!
     @IBOutlet weak var minutes: UITextField!
     @IBOutlet weak var yields: UITextField!
@@ -20,14 +20,23 @@ class RecipeAddViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        decorateTextField(name)
+        decorateTextField(minutes)
+        decorateTextField(yields)
         decorateTextView(ingredients)
         decorateTextView(directions)
+    }
+
+    private func decorateTextField(_ textField: UITextField) {
+        textField.layer.borderWidth = 1.0
+        textField.layer.cornerRadius = 8
+        textField.layer.borderColor = UIColor.lightGray.cgColor
     }
 
     private func decorateTextView(_ textView: UITextView) {
         textView.layer.borderWidth = 1.0
         textView.layer.cornerRadius = 8
-        textView.layer.borderColor = UIColor.gray.cgColor
+        textView.layer.borderColor = UIColor.lightGray.cgColor
     }
 
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {

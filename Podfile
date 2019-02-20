@@ -9,5 +9,6 @@ target 'QuickCook_APP' do
   pod 'Firebase/Core'
   pod 'FirebaseUI'
   pod 'Firebase/Database'
+  pod 'IQKeyboardManagerSwift'
 
 end
