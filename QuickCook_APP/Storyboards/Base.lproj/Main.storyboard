@@ -234,7 +234,7 @@
                                                         <rect key="frame" x="0.0" y="20.5" width="320" height="33"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="done"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
                                             </stackView>
@@ -265,14 +265,18 @@
                                 <action selector="cancelTapped:" destination="JMX-BQ-9hW" id="y8P-Vy-38V"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="koB-qo-KFo"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="koB-qo-KFo">
+                            <connections>
+                                <action selector="saveTapped:" destination="JMX-BQ-9hW" id="w6v-dW-tUv"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="directions" destination="0l4-1Y-FUC" id="A5T-hY-NVD"/>
-                        <outlet property="ingredients" destination="e7f-oH-uWs" id="YNb-UY-nOt"/>
-                        <outlet property="minutes" destination="u46-1c-QKh" id="LUa-pu-fXM"/>
-                        <outlet property="name" destination="HiX-r7-7yJ" id="8Gw-9v-3Wx"/>
-                        <outlet property="yields" destination="lxq-xm-hHe" id="m3b-fZ-3L9"/>
+                        <outlet property="directionView" destination="0l4-1Y-FUC" id="HAl-s9-jVo"/>
+                        <outlet property="ingredientView" destination="e7f-oH-uWs" id="FRU-7C-pDB"/>
+                        <outlet property="minutesField" destination="u46-1c-QKh" id="dQ2-rb-xdb"/>
+                        <outlet property="nameField" destination="HiX-r7-7yJ" id="uJY-le-Ab0"/>
+                        <outlet property="yieldsField" destination="lxq-xm-hHe" id="yh1-Ly-gib"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yJB-jh-EJP" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -395,7 +399,7 @@
                     <tabBarItem key="tabBarItem" title="Recipes" image="tb-log-30" id="pJ1-7h-qbz"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="RJJ-Yp-Yrx">
-                        <rect key="frame" x="0.0" y="20" width="320" height="50"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

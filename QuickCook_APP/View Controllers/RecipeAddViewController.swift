@@ -7,24 +7,34 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseDatabase
 
 class RecipeAddViewController: UIViewController {
 
+    var ref: DatabaseReference!
 
-    @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var minutes: UITextField!
-    @IBOutlet weak var yields: UITextField!
-    @IBOutlet weak var ingredients: UITextView!
-    @IBOutlet weak var directions: UITextView!
+    @IBOutlet weak var nameField: UITextField!
+    @IBOutlet weak var minutesField: UITextField!
+    @IBOutlet weak var yieldsField: UITextField!
+    @IBOutlet weak var ingredientView: UITextView!
+    @IBOutlet weak var directionView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        decorateTextField(name)
-        decorateTextField(minutes)
-        decorateTextField(yields)
-        decorateTextView(ingredients)
-        decorateTextView(directions)
+        configureDatabase()
+
+        decorateTextField(nameField)
+        decorateTextField(minutesField)
+        decorateTextField(yieldsField)
+        decorateTextView(ingredientView)
+        decorateTextView(directionView)
+
+    }
+
+    private func configureDatabase() {
+        ref = Database.database().reference()
     }
 
     private func decorateTextField(_ textField: UITextField) {
@@ -43,14 +53,29 @@ class RecipeAddViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
 
-    /*
-    // MARK: - Navigation
+    @IBAction func saveTapped(_ sender: UIBarButtonItem) {
+        let uuid = UUID().uuidString
+        let uploader = Auth.auth().currentUser!.uid
+        let name = nameField.text ?? "Empty"
+        let desc = "add desc text field" //TODO
+        let time = Time(prep: 10, cook: 20) //TODO
+        let yield = Int(yieldsField.text ?? "0") ?? 0
+        let ingredients = ingredientView.text.components(separatedBy: CharacterSet.newlines)
+        let directions = directionView.text.components(separatedBy: CharacterSet.newlines)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let value = [
+            "uploader": uploader,
+            "name": name,
+            "desc": desc,
+            "ingredients": ingredients,
+            "time": time.toDictionary(),
+            "yield": yield,
+            "directions": directions,
+        ] as [String : Any]
+
+        self.ref.child("recipes/\(uuid)").setValue(value)
+
+        // TODO: catch result of setValue -> close view
     }
-    */
 
 }
