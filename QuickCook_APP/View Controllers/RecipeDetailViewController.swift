@@ -69,7 +69,9 @@ class RecipeDetailViewController: UIViewController, UITextViewDelegate {
     private func createTextView(content: String) -> UITextView {
         let textView = UITextView()
         textView.text = content
-        textView.font = UIFont(name: (textView.font?.fontName)!, size: 18)
+        if let fontName = textView.font?.fontName {
+            textView.font = UIFont(name: fontName, size: 18)
+        }
         textView.textContainerInset = UIEdgeInsets(top: 4, left: 8, bottom: 8, right: 8)
         textView.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
         textView.heightAnchor.constraint(greaterThanOrEqualToConstant: 20.0).isActive = true
