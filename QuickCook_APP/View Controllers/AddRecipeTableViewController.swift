@@ -1,8 +1,8 @@
 //
-//  RecipeAddViewController.swift
+//  AddRecipeTableViewController.swift
 //  QuickCook_APP
 //
-//  Created by Ingyu Woo on 2/19/19.
+//  Created by Ingyu Woo on 2/26/19.
 //  Copyright © 2019 Ingyu Woo. All rights reserved.
 //
 
@@ -10,27 +10,29 @@ import UIKit
 import FirebaseAuth
 import FirebaseDatabase
 
-class RecipeAddViewController: UIViewController {
+class AddRecipeTableViewController: UITableViewController {
 
     var ref: DatabaseReference!
 
     @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var minutesField: UITextField!
+    @IBOutlet weak var descField: UITextField!
     @IBOutlet weak var yieldsField: UITextField!
+    @IBOutlet weak var prepMinField: UITextField!
+    @IBOutlet weak var cookMinField: UITextField!
     @IBOutlet weak var ingredientView: UITextView!
     @IBOutlet weak var directionView: UITextView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         configureDatabase()
 
-        decorateTextField(nameField)
-        decorateTextField(minutesField)
-        decorateTextField(yieldsField)
-        decorateTextView(ingredientView)
-        decorateTextView(directionView)
-
+//        decorateTextField(nameField)
+//        decorateTextField(yieldsField)
+//        decorateTextField(prepMinField)
+//        decorateTextField(cookMinField)
+//        decorateTextView(ingredientView)
+//        decorateTextView(directionView)
     }
 
     private func configureDatabase() {
@@ -54,28 +56,39 @@ class RecipeAddViewController: UIViewController {
     }
 
     @IBAction func saveTapped(_ sender: UIBarButtonItem) {
-        let uuid = UUID().uuidString
         let uploader = Auth.auth().currentUser!.uid
-        let name = nameField.text ?? "Empty"
-        let desc = "add desc text field" //TODO
-        let time = Time(prep: 10, cook: 20) //TODO
+        let name = nameField.text ?? ""
+        let desc = descField.text ?? ""
         let yield = Int(yieldsField.text ?? "0") ?? 0
+        let prepMin = Int(prepMinField.text ?? "0") ?? 0
+        let cookMin = Int(cookMinField.text ?? "0") ?? 0
+        let time = Time(prep: prepMin, cook: cookMin).toDictionary()
         let ingredients = ingredientView.text.components(separatedBy: CharacterSet.newlines)
         let directions = directionView.text.components(separatedBy: CharacterSet.newlines)
+
+        let key = ref.child("recipes").childByAutoId().key
 
         let value = [
             "uploader": uploader,
             "name": name,
             "desc": desc,
-            "ingredients": ingredients,
-            "time": time.toDictionary(),
             "yield": yield,
+            "time": time,
+            "ingredients": ingredients,
             "directions": directions,
         ] as [String : Any]
 
-        self.ref.child("recipes/\(uuid)").setValue(value)
+        let childUpdates = [
+            "/recipes/\(key)": value,
+        ]
 
-        // TODO: catch result of setValue -> close view
+        self.ref.updateChildValues(childUpdates, withCompletionBlock: { (error, ref) -> Void in
+            if (error != nil) {
+                print("Add new recipe: , Failed: \(error?.localizedDescription)")
+            } else {
+                self.dismiss(animated: true, completion: nil)
+            }
+        })
     }
 
 }

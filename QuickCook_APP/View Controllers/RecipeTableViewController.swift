@@ -43,6 +43,8 @@ class RecipeTableViewController: UITableViewController {
         recipesRef = ref.child(identifier);
 
         recipesRef.observe(DataEventType.value, with: { snapshot in
+            self.recipes.removeAll()
+
             for child in snapshot.children {
                 if let snapshot = child as? DataSnapshot {
                     self.recipes.append(Recipe(snapshot: snapshot)!)
