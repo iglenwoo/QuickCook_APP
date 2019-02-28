@@ -26,29 +26,14 @@ class AddRecipeTableViewController: UITableViewController {
         super.viewDidLoad()
 
         configureDatabase()
-
-//        decorateTextField(nameField)
-//        decorateTextField(yieldsField)
-//        decorateTextField(prepMinField)
-//        decorateTextField(cookMinField)
-//        decorateTextView(ingredientView)
-//        decorateTextView(directionView)
+        
+        yieldsField.delegate = self
+        prepMinField.delegate = self
+        cookMinField.delegate = self
     }
 
     private func configureDatabase() {
         ref = Database.database().reference()
-    }
-
-    private func decorateTextField(_ textField: UITextField) {
-        textField.layer.borderWidth = 1.0
-        textField.layer.cornerRadius = 8
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-    }
-
-    private func decorateTextView(_ textView: UITextView) {
-        textView.layer.borderWidth = 1.0
-        textView.layer.cornerRadius = 8
-        textView.layer.borderColor = UIColor.lightGray.cgColor
     }
 
     @IBAction func cancelTapped(_ sender: UIBarButtonItem) {
@@ -66,7 +51,11 @@ class AddRecipeTableViewController: UITableViewController {
         let ingredients = ingredientView.text.components(separatedBy: CharacterSet.newlines)
         let directions = directionView.text.components(separatedBy: CharacterSet.newlines)
 
-        let key = ref.child("recipes").childByAutoId().key
+        guard let key = ref.child("recipes").childByAutoId().key else {
+            print("Failed: childByAutoId")
+            self.dismiss(animated: true, completion: nil)
+            return
+        }
 
         let value = [
             "uploader": uploader,
@@ -84,11 +73,22 @@ class AddRecipeTableViewController: UITableViewController {
 
         self.ref.updateChildValues(childUpdates, withCompletionBlock: { (error, ref) -> Void in
             if (error != nil) {
-                print("Add new recipe: , Failed: \(error?.localizedDescription)")
+                print("Add new recipe: , Failed: \(error.debugDescription)")
             } else {
                 self.dismiss(animated: true, completion: nil)
             }
         })
     }
 
+}
+
+extension AddRecipeTableViewController: UITextFieldDelegate {
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        guard NSCharacterSet(charactersIn: "0123456789").isSuperset(of: NSCharacterSet(charactersIn: string) as CharacterSet) else {
+            return false
+        }
+        return true
+    }
+    
 }
