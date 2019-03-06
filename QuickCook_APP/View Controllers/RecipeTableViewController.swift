@@ -96,7 +96,9 @@ class RecipeTableViewController: UITableViewController {
                 recipes.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .bottom)
             } else {
-                print("NOT YOURS")
+                let alert = UIAlertController(title: "not yours", message: "You can only remove your recipes", preferredStyle: UIAlertController.Style.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
             }
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
