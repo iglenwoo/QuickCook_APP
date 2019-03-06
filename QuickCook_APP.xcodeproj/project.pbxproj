@@ -22,6 +22,8 @@
 		39DCAE10220266F700E56E72 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39DCAE0F220266F700E56E72 /* RecipeDetailViewController.swift */; };
 		39EB8DF9222613DA00747489 /* AddRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39EB8DF8222613DA00747489 /* AddRecipeTableViewController.swift */; };
 		39F31A3121FA786B00E6E21E /* RecipeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39F31A3021FA786B00E6E21E /* RecipeCell.swift */; };
+		907601B4E914A471EDF0B965 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907608B0F51146CA0C97FD41 /* User.swift */; };
+		90760EB5D29784387BCB79E9 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907601EC40259B90CA73CC18 /* Utils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		39EB8DF8222613DA00747489 /* AddRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddRecipeTableViewController.swift; sourceTree = "<group>"; };
 		39F31A3021FA786B00E6E21E /* RecipeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeCell.swift; sourceTree = "<group>"; };
 		5BF2A0AD98FFBA8DB3469F60 /* Pods_QuickCook_APP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuickCook_APP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		907601EC40259B90CA73CC18 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		907608B0F51146CA0C97FD41 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D0D279510DBDFDB3BDD57164 /* Pods-QuickCook_APP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickCook_APP.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickCook_APP/Pods-QuickCook_APP.debug.xcconfig"; sourceTree = "<group>"; };
 		E70F15ECA6458EAAB98EF33B /* Pods-QuickCook_APP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickCook_APP.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickCook_APP/Pods-QuickCook_APP.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +123,7 @@
 				394345CB21F1489100873B43 /* initial_recipes.json */,
 				394345CD21F15F2000873B43 /* Recipe.swift */,
 				396EAE9221F93F1C0047CB30 /* SampleData.swift */,
+				907608B0F51146CA0C97FD41 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 				391576012208F3900036340A /* View Controllers */,
 				391575FF2208F3750036340A /* Resources */,
 				391576022208F3BA0036340A /* Models */,
+				907601EC40259B90CA73CC18 /* Utils.swift */,
 			);
 			path = QuickCook_APP;
 			sourceTree = "<group>";
@@ -363,6 +369,8 @@
 				39EB8DF9222613DA00747489 /* AddRecipeTableViewController.swift in Sources */,
 				392091F221E729F7003AB1AF /* AppDelegate.swift in Sources */,
 				3920322E21F7DE7B00FD1848 /* RecipeTableViewController.swift in Sources */,
+				907601B4E914A471EDF0B965 /* User.swift in Sources */,
+				90760EB5D29784387BCB79E9 /* Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
