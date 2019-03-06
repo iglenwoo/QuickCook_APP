@@ -80,6 +80,28 @@ class RecipeTableViewController: UITableViewController {
 
         return cell
     }
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        guard let currentUser = Auth.auth().currentUser else {
+            print("currentUser is nil")
+            return
+        }
+
+        if editingStyle == .delete {
+            let recipe = recipes[indexPath.row]
+            if (recipe.uploader == currentUser.uid) {
+                // todo: remove from Firebase
+//                let identifier = "recipes/\(currentUser.uid)/\(key)"
+//                ref.child(identifier).removeValue();
+
+                recipes.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: .bottom)
+            } else {
+                print("NOT YOURS")
+            }
+        } else if editingStyle == .insert {
+            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
+        }
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let identifier = segue.identifier else { return }
