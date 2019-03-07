@@ -89,14 +89,19 @@ class RecipeTableViewController: UITableViewController {
         if editingStyle == .delete {
             let recipe = recipes[indexPath.row]
             if (recipe.uploader == currentUser.uid) {
-                // todo: remove from Firebase
-//                let identifier = "recipes/\(currentUser.uid)/\(key)"
-//                ref.child(identifier).removeValue();
+                guard let key = recipe.key else {
+                    let alert = UIAlertController(title: "Alert", message: "This recipe cannot be removed", preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                    return
+                }
+                let identifier = "recipes/\(key)"
+                ref.child(identifier).removeValue();
 
                 recipes.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .bottom)
             } else {
-                let alert = UIAlertController(title: "not yours", message: "You can only remove your recipes", preferredStyle: UIAlertController.Style.alert)
+                let alert = UIAlertController(title: "Alert", message: "You can only remove your recipes", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }

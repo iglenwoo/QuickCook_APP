@@ -37,6 +37,7 @@ struct Time {
 }
 
 struct Recipe {
+    var key: String?
     var uploader: String
     var name: String
     var desc: String
@@ -56,6 +57,7 @@ struct Recipe {
     }
 
     init?(snapshot: DataSnapshot) {
+        let key = snapshot.key
         let dict = snapshot.value as? [String:Any]
         let uploader  = dict?["uploader"] as! String
         let name = dict?["name"]  as! String
@@ -65,6 +67,7 @@ struct Recipe {
         let yield = dict?["yield"] as! Int
         let directions = dict?["directions"] as! [String]
 
+        self.key = key
         self.uploader = uploader
         self.name = name
         self.desc = desc
