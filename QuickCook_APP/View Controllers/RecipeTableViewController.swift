@@ -120,7 +120,7 @@ class RecipeTableViewController: UITableViewController {
             print("Go Details")
             let indexPath = tableView.indexPathForSelectedRow
             let index = indexPath?.row
-            let detailVC = segue.destination as! RecipeDetailViewController
+            let detailVC = segue.destination as! DetailRecipeTableViewController
             detailVC.index = index
             detailVC.recipe = recipes[index!]
         default:
