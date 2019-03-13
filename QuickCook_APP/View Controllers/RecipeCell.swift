@@ -12,7 +12,9 @@ class RecipeCell: UITableViewCell {
     
     // MARK - IBOutlets
     @IBOutlet weak var name: UILabel!
-    @IBOutlet weak var time: UILabel!
+    @IBOutlet weak var prep: UILabel!
+    @IBOutlet weak var cook: UILabel!
+    @IBOutlet weak var total: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

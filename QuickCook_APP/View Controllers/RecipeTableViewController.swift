@@ -75,8 +75,12 @@ class RecipeTableViewController: UITableViewController {
         let recipe = recipes[indexPath.row]
         cell.name.text = recipe.name
 
-        let time = String(recipe.time.prep + recipe.time.cook)
-        cell.time.text = "\(time) m"
+        let prep = String(recipe.time.prep)
+        cell.prep.text = "Prep: \(prep)m"
+        let cook = String(recipe.time.cook)
+        cell.cook.text = "Cook: \(cook)m"
+        let total = String(recipe.time.prep + recipe.time.cook)
+        cell.total.text = "Total: \(total)m"
 
         return cell
     }
