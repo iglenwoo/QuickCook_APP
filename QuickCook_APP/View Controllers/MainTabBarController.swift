@@ -32,7 +32,7 @@ class MainTabBarController: UITabBarController {
 
         if Auth.auth().currentUser != nil {
             print("[MainTabBarController] Current user is \"\(Auth.auth().currentUser.debugDescription)\"")
-            self.tabBarController?.selectedIndex = 1
+            self.selectedIndex = 0
         } else {
             openLoginView()
         }
