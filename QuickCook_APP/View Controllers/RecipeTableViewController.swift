@@ -18,14 +18,12 @@ class RecipeTableViewController: UITableViewController {
 
     var ref: DatabaseReference!
     var recipesRef: DatabaseReference!
-    var refHandle: DatabaseHandle?
+    var handle: UInt?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
 //        self.tableView.allowsSelection = true
-
-        debugPrint("[RecipeTableViewController] viewDidLoad called")
 
         configureDatabase()
 
@@ -41,8 +39,16 @@ class RecipeTableViewController: UITableViewController {
 
         let identifier = "recipes"
         recipesRef = ref.child(identifier);
+    }
 
-        recipesRef.observe(DataEventType.value, with: { snapshot in
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        guard let recipesRef = recipesRef else {
+            fatalError("Unexpected reference - list")
+        }
+
+        handle = recipesRef.observe(DataEventType.value, with: { snapshot in
             self.recipes.removeAll()
 
             for child in snapshot.children {
@@ -55,6 +61,13 @@ class RecipeTableViewController: UITableViewController {
         })
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        if let handle = handle {
+            self.ref.removeObserver(withHandle: handle)
+        }
+    }
 
     // MARK: - Table view data source
 
@@ -86,8 +99,7 @@ class RecipeTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         guard let currentUser = Auth.auth().currentUser else {
-            print("currentUser is nil")
-            return
+            fatalError("Failed to get currentUser: \(Auth.auth().currentUser)")
         }
 
         if editingStyle == .delete {
@@ -105,7 +117,7 @@ class RecipeTableViewController: UITableViewController {
                 recipes.remove(at: indexPath.row)
                 tableView.deleteRows(at: [indexPath], with: .bottom)
             } else {
-                let alert = UIAlertController(title: "Alert", message: "You can only remove your recipes", preferredStyle: UIAlertController.Style.alert)
+                let alert = UIAlertController(title: "Alert", message: "You cannot remove recipes from others", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             }
@@ -128,7 +140,7 @@ class RecipeTableViewController: UITableViewController {
             detailVC.index = index
             detailVC.recipe = recipes[index!]
         default:
-            print("???")
+            fatalError("Unexpected Segue Identifier; \(segue.identifier)")
         }
     }
 
