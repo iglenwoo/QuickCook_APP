@@ -86,7 +86,14 @@ class RecipeTableViewController: UITableViewController {
 
         // Configure the cell...
         let recipe = recipes[indexPath.row]
-        cell.name.text = recipe.name
+
+        var name = recipe.name
+        if let currentUser = Auth.auth().currentUser {
+            if (recipe.uploader == currentUser.uid) {
+                name.append(" 👤")
+            }
+        }
+        cell.name.text = name
 
         let prep = String(recipe.time.prep)
         cell.prep.text = "Prep: \(prep)m"
