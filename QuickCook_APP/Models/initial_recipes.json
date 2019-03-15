@@ -116,6 +116,86 @@
                 "Heat olive oil in a pot over medium-high heat. Cook and stir onion in hot oil until tender, about 5 minutes; add garlic and continue cooking until fragrant, 1 to 2 minutes more.",
                 "Pour tomato sauce into the pot; stir. Add cannelini beans, basil, oregano, salt, and pepper. Bring the mixture to a simmer, reduce heat to medium-low, and cook until the beans are hot, 5 to 7 minutes more."
             ]
+        },
+        "six": {
+            "uploader": "",
+            "name": "Grilled Chicken Salad Sandwich",
+            "desc": "This is a great way to use leftover grilled chicken breasts from dinner the night before. I like it on wheat. My husband likes it on sourdough.",
+            "ingredients": [
+                "1 cup mayonnaise",
+                "1/8 teaspoon ground black pepper",
+                "1/8 teaspoon garlic powder",
+                "1/8 teaspoon celery salt",
+                "4 cups chopped leftover grilled chicken",
+                "2 celery stalks, sliced",
+                "1/2 cup sweetened dried cranberries",
+                "2/3 cup salted cashews",
+                "8 slices bread, toasted",
+                "4 tablespoons mayonnaise",
+                "4 large red leaf lettuce leaves,",
+                "1 ripe tomato, sliced"
+            ],
+            "time": {
+                "prep": 10,
+                "cook": 5
+            },
+            "yield": 4,
+            "directions": [
+                "Whisk together 1 cup of mayonnaise, pepper, garlic powder, and celery salt until combined. Combine the chicken, celery, cranberries, and cashews in a large bowl. Pour the mayonnaise mixture over the chicken mixture and stir until evenly combined.",
+                "Spread 1/2 tablespoon of mayonnaise on each slice of toasted bread. Divide the chicken salad between four of the slices of toast; top each with a lettuce leaf and a slice of tomato. Complete each sandwich with the remaining toast slices."
+            ]
+        },
+        "seven": {
+            "uploader": "",
+            "name": "Vegetarian Chickpea Sandwich Filling",
+            "desc": "Serve this tasty sandwich spread on crusty whole grain rolls or pita bread, with lettuce and tomato. Other raw, chopped vegetables can be substituted for the celery. Your favorite salad dressing can be substituted for the mayo",
+            "ingredients": [
+                "1 (19 ounce) can garbanzo beans, drained and rinsed",
+                "1 stalk celery, chopped",
+                "1/2 onion, chopped1 tablespoon mayonnaise",
+                "1 tablespoon lemon juice",
+                "1 teaspoon dried dill weed",
+                "salt and pepper to taste"
+            ],
+            "time": {
+                "prep": 10,
+                "cook": 10
+            },
+            "yield": 3,
+            "directions": [
+                "Drain and rinse chickpeas. Pour chickpeas into a medium size mixing bowl and mash with a fork. Mix in celery, onion, mayonnaise (to taste), lemon juice, dill, salt and pepper to taste."
+            ]
+        },
+        "eight": {
+            "uploader": "",
+            "name": "Quinoa Black Bean Burgers",
+            "desc": "These vegetarian burgers are delicious! Your carnivorous friends will be impressed. My favorite way to serve is on a whole-wheat bun with garlic-lemon mayonnaise, fresh raw spinach, sliced tomato, and caramelized onions!",
+            "ingredients": [
+                "1 (15 ounce) can black beans, rinsed and drained",
+                "1/4 cup quinoa",
+                "1/2 cup water",
+                "1/2 cup bread crumbs",
+                "1/4 cup minced yellow bell pepper",
+                "2 tablespoons minced onion1 large clove garlic, minced",
+                "1 1/2 teaspoons ground cumin",
+                "1/2 teaspoon salt",
+                "1 teaspoon hot pepper sauce (such as Frank's RedHot®)",
+                "1 egg",
+                "3 tablespoons olive oil"
+            ],
+            "time": {
+                "prep": 25,
+                "cook": 10
+            },
+            "yield": 5,
+            "directions": [
+                "Bring the quinoa and water to a boil in a saucepan. Reduce heat to medium-low, cover, and simmer until the quinoa is tender and the water has been absorbed, about 15 to 20 minutes.",
+                "Roughly mash the black beans with a fork leaving some whole black beans in a paste-like mixture.",
+                "Mix the quinoa, bread crumbs, bell pepper, onion, garlic, cumin, salt, hot pepper sauce, and egg into the black beans using your hands.",
+                "Form the black bean mixture into 5 patties.",
+                "Heat the olive oil in a large skillet.",
+                "Cook the patties in the hot oil until heated through, 2 to 3 minutes per side."
+            ]
         }
     },
     "users" : {
